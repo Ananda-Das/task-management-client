@@ -13,7 +13,7 @@ const TaskColumn = ({ task, title, refetch, provided }) => {
         <p className="text-xl font-semibold uppercase">{title}</p>
       </div>
       <div className="px-2 flex flex-1 flex-col text-orange-500 border-b-2 border-x-2  rounded-b-md overflow-y-auto">
-        {/* {task &&
+        {task &&
           task.map((item, index) => (
             <Draggable key={item._id} draggableId={item._id} index={index}>
               {provided => (
@@ -25,7 +25,7 @@ const TaskColumn = ({ task, title, refetch, provided }) => {
                 />
               )}
             </Draggable>
-          ))} */}
+          ))}
       </div>
       {provided.placeholder}
     </div>

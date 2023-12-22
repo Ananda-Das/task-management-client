@@ -41,7 +41,7 @@ const TaskCard = ({ item, refetch, provided }) => {
             refetch();
             Swal.fire({
               title: 'Deleted!',
-              text: 'Your file has been deleted.',
+              text: 'Your Task has been deleted.',
               icon: 'success',
               color: 'white',
               background: '#121041',
@@ -69,20 +69,20 @@ const TaskCard = ({ item, refetch, provided }) => {
       <h3 className="text-bold text-center mb-2 text-blue-950 text-2xl font-bold">
         {item.title}
       </h3>
-      <p className="text-xl font-bold text-[#FF2C9C]">{item.description}</p>
+      <p className="text-xl font-bold text-[#000000]">{item.description}</p>
       <div className="flex mb-5 justify-between pt-2">
         <span
           className={`px-1 rounded-md text-white ${
-            item.priority === 'low' && 'bg-blue-500'
-          } ${item.priority === 'medium' && 'bg-yellow-500'} ${
-            item.priority === 'high' && 'bg-red-700'
+            item.priority === 'low' && 'bg-blue-500 px-3 py-3 font-bold'
+          } ${item.priority === 'medium' && 'bg-yellow-500 px-3 py-3 font-bold'} ${
+            item.priority === 'high' && 'bg-red-700 px-3 py-3 font-bold'
           }`}
         >
           {item.priority}
         </span>
         <span className="text-xl text-blue-950 font-bold">{item.date}</span>
         <span className="flex font-bold items-center gap-1 text-2xl text-blue-700">
-          <FaRegClock />
+          
         </span>
       </div>
       <div className="flex justify-between pt-1 ">
@@ -91,19 +91,6 @@ const TaskCard = ({ item, refetch, provided }) => {
             <path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"></path>
           </svg>
         </button>
-
-        {/* <select
-          onChange={handleStatus}
-          className="rounded-lg outline-orange-500"
-          name="status"
-          id=""
-          defaultValue={item.status}
-        >
-          <option disabled>Set Status</option>
-          <option value="todo">Todo</option>
-          <option value="progress">progress</option>
-          <option value="completed">Completed</option>
-        </select> */}
 
         <button title="Delete Task" onClick={handleDelete} class="buttu">
           <svg
@@ -145,13 +132,6 @@ const TaskCard = ({ item, refetch, provided }) => {
           </svg>
         </button>
 
-        {/* <button
-          onClick={handleDelete}
-          className="text-2xl text-red-500 font-bold"
-          title="Delete Task"
-        >
-          <MdDelete />
-        </button> */}
       </div>
       <EditModal
         refetch={refetch}

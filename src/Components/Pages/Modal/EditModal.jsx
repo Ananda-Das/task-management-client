@@ -66,33 +66,37 @@ const EditModal = ({ isOpen, closeModal, item, refetch }) => {
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
-                    className="text-lg font-semibold text-center leading-6 text-orange-500 "
+                    className="text-lg font-semibold text-center leading-6  "
                   >
                     Edit Task
                   </Dialog.Title>
                   <div className="mt-2">
                     <form onSubmit={handleUpdate}>
-                      <label className="text-orange-500">Title: </label>
+                      <div>
+                      <label className="">Title: </label>
                       <input
-                        className="outline-orange-500 overflow-hidden bg-orange-200 py-1 px-1"
+                        className=" overflow-hidden  py-1 px-1"
                         defaultValue={item.title}
                         type="text"
                         placeholder="Title"
                         name="title"
                       />
-                      <label className="text-orange-500">Description: </label>
+                      </div>
+                      <div className='mt-2'>
+                      <label className="">Description: </label>
                       <textarea
-                        className="outline-orange-500  bg-orange-200 py-1 px-1 mt-2"
+                        // className="py-1 px-1 mt-2"
                         defaultValue={item.description}
                         placeholder="Description"
                         name="description"
                         cols="25"
-                        rows="4"
+                        rows="2"
                       ></textarea>
-                      <br />
-                      <label className="text-orange-500 ">Priority: </label>
+                      </div>
+                      <div>
+                      <label className=" ">Priority: </label>
                       <select
-                        className="rounded-lg mt-2 bg-orange-200 outline-orange-500"
+                        className="rounded-lg mt-2  "
                         name="priority"
                         defaultValue={item.priority}
                       >
@@ -101,21 +105,24 @@ const EditModal = ({ isOpen, closeModal, item, refetch }) => {
                         <option value="moderate">Moderate</option>
                         <option value="high">High</option>
                       </select>
-                      <label className="text-orange-500 pl-1 ">Deadline:</label>
+                      </div>
+                      <div>
+                      <label className=" pl-1 ">Deadline:</label>
                       <input
-                        className="rounded-lg mt-2 bg-orange-200 outline-orange-500"
+                        className="rounded-lg mt-2  "
                         type="date"
                         name="deadline"
                         defaultValue={item.deadline}
                       />
-                      <br />
+                      </div>
+                      <div>
                       <button
                         type="submit"
-                        className="mt-4 inline-flex justify-center rounded-md border border-transparent bg-orange-100 px-4 py-2 text-sm font-medium text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-                        // onClick={handleTerSend}
+                        className='btn btn-info mt-3 w-full'
                       >
                         Update
                       </button>
+                      </div>
                     </form>
                   </div>
                 </Dialog.Panel>
