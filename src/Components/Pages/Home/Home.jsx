@@ -1,14 +1,13 @@
-import Personalities from '../../Personalities/Personalities';
-import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
+import Personalities from "../../Personalities/Personalities";
+import Banner from "../Banner/Banner";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
     <div>
       <div>
-        {/* <Banner></Banner>
+        <Banner></Banner>
         <Personalities></Personalities>
-        <Footer></Footer> */}
       </div>
     </div>
   );
