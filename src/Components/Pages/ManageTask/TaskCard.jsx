@@ -73,9 +73,9 @@ const TaskCard = ({ item, refetch, provided }) => {
       <div className="flex mb-5 justify-between pt-2">
         <span
           className={`px-1 rounded-md text-white ${
-            item.priority === 'low' && 'bg-green-500'
-          } ${item.priority === 'medium' && 'bg-blue-500'} ${
-            item.priority === 'high' && 'bg-red-500'
+            item.priority === 'low' && 'bg-blue-500'
+          } ${item.priority === 'medium' && 'bg-yellow-500'} ${
+            item.priority === 'high' && 'bg-red-700'
           }`}
         >
           {item.priority}
@@ -92,14 +92,7 @@ const TaskCard = ({ item, refetch, provided }) => {
           </svg>
         </button>
 
-        {/* <button
-          onClick={() => openModal()}
-          className="text-xl text-blue-700"
-          title="Delete Task"
-        >
-          <FaEdit />
-        </button> */}
-        <select
+        {/* <select
           onChange={handleStatus}
           className="rounded-lg outline-orange-500"
           name="status"
@@ -110,7 +103,7 @@ const TaskCard = ({ item, refetch, provided }) => {
           <option value="todo">Todo</option>
           <option value="progress">progress</option>
           <option value="completed">Completed</option>
-        </select>
+        </select> */}
 
         <button title="Delete Task" onClick={handleDelete} class="buttu">
           <svg

@@ -26,17 +26,17 @@
   fill: white;
 }
 
-.buttu:hover {
+/* .buttu:hover {
   transition-duration: 0.3s;
   background-color: rgb(255, 69, 69);
   align-items: center;
   gap: 0;
-}
+} */
 
-.bin-top {
+/* .bin-top {
   transform-origin: bottom right;
 }
 .buttu:hover .bin-top {
   transition-duration: 0.5s;
   transform: rotate(160deg);
-}
+} */

@@ -9,7 +9,6 @@ import AuthProvider from './Components/AuthProvider/AuthProvider';
 import Login from './Components/Pages/Login/Login';
 import Register from './Components/Pages/Register/Register';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import CreateTask from './Components/Pages/CreateTask/CreateTask';
 import ManageTask from './Components/Pages/ManageTask/ManageTask';
 
@@ -40,22 +39,15 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      
       {
-        path: '/dashboard',
+        path: '/tasks',
         element: (
           <PrivateRoute>
-            <Dashboard></Dashboard>
+            <ManageTask></ManageTask>
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: '/tasks',
-      //   element: (
-      //     <PrivateRoute>
-      //       <ManageTask></ManageTask>
-      //     </PrivateRoute>
-      //   ),
-      // },
     ],
   },
 ]);

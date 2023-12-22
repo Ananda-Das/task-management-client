@@ -39,7 +39,7 @@
   transition: all 0.2s;
   transform-origin: bottom;
 }
-.editBtn:hover svg {
+/* .editBtn:hover svg {
   transform: rotate(-15deg) translateX(5px);
 }
 .editBtn::after {
@@ -55,9 +55,9 @@
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.5s ease-out;
-}
-.editBtn:hover::after {
+} */
+/* .editBtn:hover::after {
   transform: scaleX(1);
   left: 0px;
   transform-origin: right;
-}
+} */
